@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,9 +20,9 @@
             
                 <table id="" class="table">
                     <tr>
-                        <th>Name</th>
-                        <th>Family</th>
-                        <th>Action</th>
+                        <th class="headertbl">Name</th>
+                        <th class="headertbl">Family</th>
+                        <th class="headertbl">Action</th>
                     </tr>
                 </table>
             <table id="lasttable" class="table">
@@ -42,7 +42,7 @@
             var table = document.getElementById("lasttable");
             var table_len = (table.rows.lenght);
 
-            table.insertRow(table_len).outerHTML ="<tr id='row"+table_len+"'><td class= 'data' id='name_row"+table_len+"'>"+name+"</td><td class= 'data' id='family_row"+table_len+"'>"+family+"</td><td><input type='submit' id='edit_button"+table_len+"' class='edit' value='Edit' onclick='editrow("+table_len+")'/></td></tr>";
+            table.insertRow(table_len).outerHTML ="<tr class='rows' id='row"+table_len+"'><td class= 'data' id='name_row"+table_len+"'>"+name+"</td><td class= 'data' id='family_row"+table_len+"'>"+family+"</td><td><input type='submit' id='edit_button"+table_len+"' class='edit' value='Edit' onclick='editrow("+table_len+")'/></td></tr>";
 
 
 
