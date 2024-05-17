@@ -1,0 +1,81 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(120deg, #3498db, #8e44ad);
+
+}
+.headertbl{
+    font-size: 1.2rem;
+}
+
+
+.data{
+    font-size: 1rem;
+}
+.edit{
+    height: 30%;
+    width: 60%;
+}
+.result_tbl {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    display: block;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#login_frm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.table {
+    text-align:center;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width:100%;
+    line-height:1.7rem;
+}
+th, td {
+    border: 1px solid black;
+    width: 100px;
+    overflow: hidden;
+}
+h2 {
+    margin: 0 0 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top:0.5rem;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    button:hover {
+        background: #2980b9;
+    }
