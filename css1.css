@@ -1,4 +1,4 @@
-﻿body {
+body {
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -8,12 +8,17 @@
     background: linear-gradient(120deg, #3498db, #8e44ad);
 
 }
+.headertbl{
+    font-size: 1.2rem;
+}
+
+
 .data{
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 .edit{
-    height: auto;
-    width: auto;
+    height: 30%;
+    width: 60%;
 }
 .result_tbl {
     background: rgba(255, 255, 255, 0.3);
