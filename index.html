@@ -30,7 +30,7 @@
 
             </table>
             <p id="p_test"> </p>
-            <p>hello</p>
+            
            
         </form>
     </div>
@@ -45,7 +45,7 @@
 
             table.insertRow(table_len).outerHTML ="<tr class='rows' id='row"+table_len+"'><td class= 'data' id='name_row"+table_len+"'>"+name+"</td><td class= 'data' id='family_row"+table_len+"'>"+family+"</td><td><input type='submit' id='edit_button"+table_len+"' class='edit' value='Edit' onclick='editrow("+table_len+")'/></td></tr>";
 
-             document.getElementById("p_test").innerText = "hi";
+             document.getElementById("p_test").innerText = table_len;
 
         }
        
