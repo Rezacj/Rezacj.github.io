@@ -29,7 +29,7 @@
                 
 
             </table>
-
+            <p id="p_test"> </p>
            
         </form>
     </div>
@@ -40,11 +40,11 @@
             var family = document.getElementById("txt_family").value;
 
             var table = document.getElementById("lasttable");
-            var table_len = (table.rows.lenght);
+            var table_len = table.rows[ table.rows.length - 1 ];
 
             table.insertRow(table_len).outerHTML ="<tr class='rows' id='row"+table_len+"'><td class= 'data' id='name_row"+table_len+"'>"+name+"</td><td class= 'data' id='family_row"+table_len+"'>"+family+"</td><td><input type='submit' id='edit_button"+table_len+"' class='edit' value='Edit' onclick='editrow("+table_len+")'/></td></tr>";
 
-
+             document.getElementById("p_test").value = "hi";
 
         }
        
