@@ -43,7 +43,7 @@
             var table = document.getElementById('lasttable');
             var table_len = document.getElementById('lasttable').rows.length;
             
-            table.insertRow(table_len).outerHTML ="<tr class='rows' id='row"+table_len+"'><td class= 'data' id='name_row"+table_len+"'>"+name+"</td><td class= 'data' id='family_row"+table_len+"'>"+family+"</td><td><input type='submit' id='edit_button"+table_len+"' class='edit' value='Edit' onclick='editrow("+table_len+")'/></td></tr>";
+            table.insertRow(table_len).outerHTML ="<tr class='rows' id='row"+table_len+"'><td class= 'data' id='name_row"+table_len+"'>"+name+"</td><td class= 'data' id='family_row"+table_len+"'>"+family+"</td><td><input type='submit' id='edit_button"+table_len+"' class='edit' value='Edit' onclick='editrow("+table_len+")'/> <input type='submit' id='delete_button"+table_len+"' class='edit' value='Delete' onclick='deleterow("+table_len+")'/> </td><input type='submit' id='show_button"+table_len+"' class='edit' value='Show' onclick='showrow("+table_len+")'/></tr>";
 
             
         
