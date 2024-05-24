@@ -21,7 +21,6 @@
   font-weight: bold;
   transition: .5s;
   overflow: hidden;
-  margin-right: 70px;
   cursor: pointer;
 }
 .btn:hover{
