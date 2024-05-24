@@ -1,150 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link href="css1.css" rel="stylesheet" />
-</head>
-<body>
-    <div class="login-container">
-
-        <form id="login_frm" style="width:18rem;">
-            <h2>List of pepole</h2>
-            <input id="txt_name" type="text" placeholder="Name">
-            <input id="txt_family" type="text" placeholder="Family">
-            <button type="button" class="buttons" id="buttonsave" onclick="add()">Save</button>
-            <button type="button" class="buttons" id="button_edit_save" style="display: none;" onclick="edit_save()">Edit</button>
-
-        </form>
-        <br />
-        <form class="result_tbl" >
-            
-                <table id="" class="table">
-                    <tr>
-                        <th class="headertbl">Name</th>
-                        <th class="headertbl">Family</th>
-                        <th class="headertbl" id="tdaction">Action</th>
-                    </tr>
-                </table>
-            <table id="lasttable" class="table">
-                
-            </table>
-            
-           
-        </form>
-    </div>
-
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
     
-<div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-      <div class="modal-header">
-        <span class="close">&times;</span>
-        <h2></h2>
-      </div>
-      <div class="modal-body">
-        <p>Do you want really Delete?</p>
-        <button type="button" id="modal_yesbtn" onclick="delete_row()" class="modal_btns">Yes</button>
-        <button type="button" id="modal_nobtn" onclick="close_modal()" class="modal_btns">no</button>
-
+    <div class="wrapper">
+      <div class="btn">
+        <span></span>
+        button
       </div>
     </div>
 
-</div>
-
-<script>
-    var index_row = -1;
-    var index_row_forDelete = -1;
-
-
-function add() {
-    var name = document.getElementById('txt_name').value;
-    var family = document.getElementById('txt_family').value;
-
-    var table = document.getElementById('lasttable');
-    var table_len = document.getElementById('lasttable').rows.length;
-    
-    table.insertRow(table_len).outerHTML ="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+name+"</td><td id='family_row"+table_len+"'>"+family+"</td><td class='td3'><input type='button' class='actionbuttons' id='edit_button"+table_len+"'  value='Edit' onclick='editrow("+table_len+")'/> <input type='button' class='actionbuttons' id='delete_button"+table_len+"'  value='Delete' onclick='deleterow("+table_len+")'/><input type='button' class='actionbuttons' id='show_button"+table_len+"' value='Show' onclick='showrow("+table_len+")'/></td></tr>";
-
-    document.getElementById("txt_name").value ="";
-    document.getElementById("txt_family").value ="";
-
-
-}
-function editrow(nu){
-    document.getElementById("edit_button"+nu).style.display ="none";
-    document.getElementById("buttonsave").style.display ="none";
-    document.getElementById("button_edit_save").style.display ="inline-block";
-
-    var name1 = document.getElementById("name_row"+nu);
-    var family1 = document.getElementById("family_row"+nu);
-
-    var name_data = name1.innerHTML;
-    var family_data = family1.innerHTML;
-    window.index_row = nu;
-
-    document.getElementById("txt_name").value = name_data;
-    document.getElementById("txt_family").value =family_data;
-}
-
-function edit_save() {
-    var name_val = document.getElementById("txt_name").value;
-    var family_val = document.getElementById("txt_family").value;
-
-    document.getElementById("name_row"+index_row).innerHTML = name_val;
-    document.getElementById("family_row"+index_row).innerHTML = family_val;
-
-    document.getElementById("edit_button"+index_row).style.display ="inline-block";
-    document.getElementById("buttonsave").style.display ="inline-block";
-    document.getElementById("button_edit_save").style.display ="none";
-
-    document.getElementById("txt_name").value ="";
-    document.getElementById("txt_family").value ="";
-}
-function delete_row(){
-   document.getElementById("lasttable").deleteRow(index_row_forDelete);
-   close_modal();
-
-}
-function deleterow(nu){
-   var btn = document.getElementById("delete_button"+nu);
-   btn.onclick = function() {
-    var modal = document.getElementById("myModal");
-    modal.style.display = "block";
-   }
-   index_row_forDelete = nu;
-
-}
-function showrow(nu) {
-    var name1 = document.getElementById("name_row"+nu);
-    var family1 = document.getElementById("family_row"+nu);
-
-    var name_data = name1.innerHTML;
-    var family_data = family1.innerHTML;
-    
-
-    document.getElementById("txt_name").value = name_data;
-    document.getElementById("txt_family").value =family_data;
-}
-         // for close modal if click any where outside modal
-         var modal = document.getElementById("myModal");
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-    
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-    function close_modal() {
-        modal.style.display = "none";
-    }
-</script>
-</body>
+  </body>
 </html>
